@@ -1,0 +1,31 @@
+<header>
+  <div id="contacts">
+    +8 (800) 555-35-35
+    <span>
+      <a id="cart-icon">
+        <mat-icon>shopping_cart</mat-icon>
+      </a>
+      <a>Вход</a>
+      &nbsp;|&nbsp;
+      <a>Регистрация</a>
+    </span>
+  </div>
+  <div id="header-main">
+    <a routerLink="/" id=logo>
+      <span>Tutor Club</span><br>
+      <span>Вместе стремимся к знаниям</span>
+    </a>
+    <mat-form-field floatLabel="never">
+      <input matInput placeholder="Поиск репетиторов">
+      <a matSuffix>
+        <mat-icon>search</mat-icon>
+      </a>
+    </mat-form-field>
+  </div>
+</header>
+<div id="content">
+  <router-outlet></router-outlet>
+</div>
+<footer>
+
+</footer>
