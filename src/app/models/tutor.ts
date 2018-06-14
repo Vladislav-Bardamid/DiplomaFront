@@ -1,6 +1,11 @@
 export class Tutor {
     id: number;
-    userId: number;
+    firstName: string;
+    secondName: string;
+    middleName: string;
+    imageUrl: string;
+    description: string;
+    price: number;
     countPluses: number;
     countMinuses: number;
 }

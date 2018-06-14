@@ -9,10 +9,19 @@ li {
 
 li a {
   display: block;
+  font-size: 0.8em;
+  padding: 15px;
+}
+
+li a img {
+  display: block;
   width: 150px;
-  height: 150px;
-  color: #aaa;
-  font-size: 0.8em; 
+  margin-bottom: 5px;
+}
+
+li a span {
+  color: #09C;
+  font-size: 1.2em;
 }
 
 li a:hover {
@@ -28,8 +37,14 @@ li a:hover {
   text-align: center;
 }
 
-#main-content span {
+nav {
+  text-align: center;
+}
+
+h1 {
   color: #09C;
   font-style: italic;
   font-size: 1.5em;
+  margin-bottom: 15px;
+  margin: 0px auto;
 }

@@ -1,3 +1,39 @@
-<p>
-  userTutors works!
-</p>
+<h1>Запись на обучение</h1>
+<form [formGroup]="writeForm">
+  Предмет:
+  <mat-form-field>
+    <mat-select placeholder="Выберите предмет" formControlName="subject">
+      <mat-option *ngFor="let subject of subjects" [value]="subject.id">
+        {{ subject.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br> Время начала занятий:
+  <mat-form-field>
+    <input matInput [matDatepicker]="timeOfStartPicker" placeholder="Choose a date" formControlName="timeOfStart">
+    <mat-datepicker-toggle matSuffix [for]="timeOfStartPicker"></mat-datepicker-toggle>
+    <mat-datepicker #timeOfStartPicker></mat-datepicker>
+  </mat-form-field>
+  <br>
+  <br> Время конца занятий:
+  <mat-form-field>
+    <input matInput [matDatepicker]="timeOfEndPicker" placeholder="Choose a date" formControlName="timeOfEnd">
+    <mat-datepicker-toggle matSuffix [for]="timeOfEndPicker"></mat-datepicker-toggle>
+    <mat-datepicker #timeOfEndPicker></mat-datepicker>
+  </mat-form-field>
+  <br>
+  <br>
+  <a href="javascript:void(0)" class="write" (click)="writeLesson()">Записаться</a>
+</form>
+<br>
+<h2>Запланированное:</h2>
+
+<mat-list>
+  <mat-list-item *ngFor="let lesson of lessons; let last = last;">
+    Ученик: {{lesson.userFirstName}} {{lesson.userSecondName}} {{lesson.userMiddleName}}
+    <br> Предмет: {{lesson.name}}
+    <br> Дата начала: {{lesson.timeOfStart | date }}
+    <br> Дата конца: {{lesson.timeOfEnd | date }}
+    <mat-divider *ngIf="!last"></mat-divider>
+  </mat-list-item>
+</mat-list>

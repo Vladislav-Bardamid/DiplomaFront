@@ -8,6 +8,8 @@ import { MaterialModule } from '../material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserAuthComponent } from './userAuth/userAuth.component';
 import { AvatarModule } from 'ngx-avatar';
+import { UserSubjectsComponent } from './userSubjects/userSubjects.component';
+import { UserCommentsComponent } from './userComments/userComments.component';
 
 @NgModule({
   imports: [
@@ -23,7 +25,9 @@ import { AvatarModule } from 'ngx-avatar';
     UserTutorsComponent,
     UserHomeComponent,
     UserTutorsComponent,
-    UserAuthComponent
-  ]
+    UserAuthComponent,
+    UserSubjectsComponent,
+    UserCommentsComponent
+]
 })
 export class UserModule { }

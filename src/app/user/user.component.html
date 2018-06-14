@@ -2,9 +2,8 @@
   <div id="contacts">
     +8 (800) 555-35-35
     <span>
-      <a id="cart-icon">
-        <mat-icon>shopping_cart</mat-icon>
-      </a>
+      <a>Мои записи</a>
+      &nbsp;
       <a>Вход</a>
       &nbsp;|&nbsp;
       <a>Регистрация</a>
@@ -12,7 +11,8 @@
   </div>
   <div id="header-main">
     <a routerLink="/" id=logo>
-      <span>Tutor Club</span><br>
+      <span>Tutor Club</span>
+      <br>
       <span>Вместе стремимся к знаниям</span>
     </a>
     <mat-form-field floatLabel="never">
@@ -24,7 +24,9 @@
   </div>
 </header>
 <div id="content">
-  <router-outlet></router-outlet>
+  <div id="centerContent">
+    <router-outlet></router-outlet>
+  </div>
 </div>
 <footer>
 

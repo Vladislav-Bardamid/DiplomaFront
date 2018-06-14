@@ -2,6 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { UserHomeComponent } from './userHome/userHome.component';
 import { UserTutorsComponent } from './userTutors/userTutors.component';
 import { UserComponent } from './user.component';
+import { UserSubjectsComponent } from './userSubjects/userSubjects.component';
 
 const routes: Routes = [
   {
@@ -14,7 +15,11 @@ const routes: Routes = [
         component: UserHomeComponent
       },
       {
-        path: 'tutors',
+        path: 'subjects/:subject',
+        component: UserSubjectsComponent
+      },
+      {
+        path: 'tutors/:tutor',
         component: UserTutorsComponent
       },
       {

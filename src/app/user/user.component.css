@@ -1,30 +1,19 @@
-header>div {
-  padding: 0px 150px;
+#contacts {
+  padding: 5px 150px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-
-#contacts span {
-  display: flex;
-  align-items: center;
-}
-
-#cart-icon {
-  margin-right: 15px;
-}
-
-#contacts {
   background-color: #111;
   color: #aaa;
   font-size: 0.8em;
 }
 
 #header-main {
+  padding: 0px 100px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 mat-form-field {
@@ -34,6 +23,7 @@ mat-form-field {
 #logo {
   color: #09C;
   line-height: 0.8;
+  white-space: nowrap;
 }
 
 #logo span:first-child {
@@ -47,5 +37,10 @@ footer {
 }
 
 #content {
-  padding: 15px;
+  text-align: center;
+}
+
+#centerContent {
+  display: inline-block;
+  text-align: left;
 }

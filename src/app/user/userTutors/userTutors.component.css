@@ -1,0 +1,21 @@
+h1 {
+  margin: 15px 0px;
+  display: inline-block;
+}
+
+h2 {
+  display: inline-block;
+}
+
+::ng-deep  .mat-list .mat-list-item{
+  height:initial!important;
+}
+
+.write {
+  display: inline-block;
+  padding: 5px;
+  background-color: #09C;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}

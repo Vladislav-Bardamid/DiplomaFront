@@ -1,22 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from '../../services/http.Service';
 import { Subject } from '../../models/subject';
+import { HttpService } from '../../services/http.Service';
 import { Tutor } from '../../models/tutor';
-import 'rxjs/add/operator/map';
 
 @Component({
-  selector: 'app-user-home',
-  templateUrl: './userHome.component.html',
-  styleUrls: ['./userHome.component.css']
+  selector: 'app-user-subjects',
+  templateUrl: './userSubjects.component.html',
+  styleUrls: ['./userSubjects.component.css']
 })
-export class UserHomeComponent implements OnInit {
+export class UserSubjectsComponent implements OnInit {
 
   subjects: Subject[];
+  tutors: Tutor[];
 
   constructor(private httpService: HttpService) { }
 
   ngOnInit() {
     this.httpService.getViewModel('subjects').subscribe((data: Subject[]) => this.subjects = data);
+    this.httpService.getViewModel('tutors').subscribe((data: Tutor[]) => this.tutors = data);
   }
 
 }

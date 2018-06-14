@@ -1,0 +1,93 @@
+h1 {
+  margin: 15px 0px;
+  display: inline-block;
+}
+
+#params {
+  padding: 15px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  border-radius: 3px;
+  text-align: left;
+}
+
+#params ul {
+  list-style-type: none;
+  margin-bottom: 15px;
+}
+
+#params a {
+  text-decoration: none;
+  color: black;
+}
+
+#tutors {
+  display: inline-block;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  border-radius: 3px;
+  vertical-align: top;
+  text-align: left;
+  margin-left: 15px;
+}
+
+#tutors ul {
+  list-style-type: none;
+}
+
+#tutors li {
+  padding: 15px;
+}
+
+#tutors li>* {
+  display: inline-block;
+}
+
+.fullName {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#tutors li>div {
+  width: 500px;
+  text-align: justify;
+}
+
+ngx-avatar {
+  height: 100%;
+  vertical-align: top;
+  margin-right: 10px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.counts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pluses {
+  color: green;
+}
+
+.minuses {
+  color: red;
+}
+
+.links {
+  text-align: right;
+}
+
+.write {
+  display: inline-block;
+  padding: 5px;
+  background-color: #09C;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}

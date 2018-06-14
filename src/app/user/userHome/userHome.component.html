@@ -1,15 +1,11 @@
+<h1>Предметы на любой вкус</h1>
 <nav>
   <ul>
     <li *ngFor="let subject of subjects">
-      <a routerLink="/home" full routerLinkActive="selectedItem">{{subject.name}}</a>
+      <a routerLink="/subjects/{{subject.url}}" routerLinkActive="selectedItem">
+        <img [src]="subject.imageUrl" alt="">
+        <span>{{subject.name}}</span>
+      </a>
     </li>
   </ul>
 </nav>
-<div id="main-content">
-  <span>Любые предметы</span>
-</div>
-<ul>
-  <li *ngFor="let tutor of tutors">
-    <a routerLink="/home" full routerLinkActive="selectedItem">{{tutor.id}}</a>
-  </li>
-</ul>

@@ -1,0 +1,41 @@
+<h1>Репетиторы</h1>
+<br>
+<div id="params">
+  <ul>
+    <li *ngFor="let subject of subjects">
+      <a>
+        <mat-checkbox color="primary">{{subject.name}}</mat-checkbox>
+      </a>
+    </li>
+  </ul>
+</div>
+<div id="tutors">
+  <ul>
+    <li *ngFor="let tutor of tutors; let last = last">
+      <ngx-avatar name="{{tutor.firstName}} {{tutor.secondName}}" size="100" bgColor="lightblue"></ngx-avatar>
+      <div>
+        <span class="fullName">
+          {{tutor.firstName}} {{tutor.secondName}} {{tutor.middleName}}
+        </span>
+        <br>
+        <br>
+        <p>
+          {{tutor.description}}
+        </p>
+        <br>
+        <div class="counts">
+          <span class="price">Цена: {{tutor.price}}&#8372;</span>
+          <div>
+            <span class="pluses">{{tutor.countPluses}}</span>
+            /
+            <span class="minuses">{{tutor.countMinuses}}</span>
+          </div>
+        </div>
+        <div class="links">
+          <a class="write" routerLink="/tutors/{{tutor.id}}">Записаться</a>
+        </div>
+      </div>
+      <hr *ngIf="!last">
+    </li>
+  </ul>
+</div>
